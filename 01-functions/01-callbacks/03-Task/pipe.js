@@ -4,7 +4,7 @@ const pipe = (callbacks) =>
             {
             for (let i = 0; i < callbacks.length; i++)
             {
-                i(value);
+                callbacks[i](value);
             } 
             };
     };
