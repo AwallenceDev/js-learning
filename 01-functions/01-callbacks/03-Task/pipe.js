@@ -4,8 +4,10 @@ const pipe = (callbacks) =>
             {
             for (let i = 0; i < callbacks.length; i++)
             {
-                callbacks[i](value);
+                value = callbacks[i](value);
             } 
+
+            return value
             };
     };
 
@@ -17,7 +19,7 @@ const transform = pipe([
 
 function main()
 {
-    transform(5);
+    console.log(transform(5));
 }
 
 main();
