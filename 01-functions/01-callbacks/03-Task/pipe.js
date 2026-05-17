@@ -2,7 +2,6 @@ const pipe = (callbacks) =>
     {
         return (value) => 
             {
-
             for (let i = 0; i < callbacks.length; i++)
             {
                 callbacks(value);
