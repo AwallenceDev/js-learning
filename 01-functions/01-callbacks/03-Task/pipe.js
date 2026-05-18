@@ -14,13 +14,13 @@ const pipe = (callbacks) =>
 
 const transform = pipe([
     (element) => element * 2,
-    (element) => element + 10,
+    (element) => element + 20,
     (element) => element ** 2,
 ]);
 
 function main() 
 {
-    console.log(transform(10));
+    console.log(transform(20));
 }
 
 main();
