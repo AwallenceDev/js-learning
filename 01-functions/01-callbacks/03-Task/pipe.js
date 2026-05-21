@@ -7,7 +7,7 @@ const pipe = (callbacks) =>
             value = callbacks[i](value);
         }
 
-        return value
+        return value;
     };
 };
 
