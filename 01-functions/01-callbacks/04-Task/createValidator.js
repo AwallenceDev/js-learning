@@ -5,6 +5,10 @@ const validate = createValidator([
 ]);
 
 function main()
-{}
+{
+    validate("Alex"); 
+    validate("Al");  
+    validate("Alexander the Great"); 
+}
 
 main();
