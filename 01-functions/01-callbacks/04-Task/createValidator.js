@@ -4,7 +4,7 @@ const isShortEnough = (userValue) => userValue.length <= 10;
 
 const isCapitalized = (userValue) => userValue[0] === userValue[0].toUpperCase();
 
-const rules = createValidator([
+const rules = rulesArray([
     isLongEnough,
     isShortEnough,
     isCapitalized,
