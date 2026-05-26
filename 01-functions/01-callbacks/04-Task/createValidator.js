@@ -16,7 +16,7 @@ const validate = (userValue) =>
 {
     for (let i = 0; i < rules.length; i++)
     {
-        if (rules[i] === false) { return false; }
+        if (rules[i](userValue) === false) { return false; }
     }
 
     return true;
