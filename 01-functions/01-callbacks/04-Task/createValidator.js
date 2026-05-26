@@ -10,21 +10,26 @@ const rules = [
     isCapitalized,
 ];
 
-const createValidator = (rules) => validate;
-
-const validate = (userValue) =>
+const createValidator = (rules) =>
 {
-    for (let i = 0; i < rules.length; i++)
-    {
-        if (rules[i](userValue) === false) { return false; }
-    }
+    const validate = (userValue) =>
+        {
+            for (let i = 0; i < rules.length; i++)
+            {
+                if (rules[i](userValue) === false) { return false; }
+            }
+        
+            return true;
+        }
 
-    return true;
+        return validate;
 }
+
+const validator = createValidator(rules);
 
 function main()
 {
-    
+    validator("Oleh");    
 }
 
 main();
