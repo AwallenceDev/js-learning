@@ -1,6 +1,6 @@
-const isLongEnough = (userValue) => userValue.Length >=3; 
+const isLongEnough = (userValue) => userValue.length >=3; 
 
-const isShortEnough = (userValue) => userValue.Length <= 10; 
+const isShortEnough = (userValue) => userValue.length <= 10; 
 
 const isCapitalized = (userValue) => value[0] === value[0].toUpperCase();
 
