@@ -4,7 +4,7 @@ const isShortEnough = (userValue) => userValue.length <= 10;
 
 const isCapitalized = (userValue) => userValue[0] === userValue[0].toUpperCase();
 
-const rules = [
+const passwordRules = [
     isLongEnough,
     isShortEnough,
     isCapitalized,
@@ -16,7 +16,7 @@ const createValidator = (rules) =>
         {
             for (let i = 0; i < rules.length; i++)
             {
-                if (rules[i](userValue) === false) { return false; }
+                if (!rules[i](userValue)) { return false; }
             }
         
             return true;
@@ -25,12 +25,14 @@ const createValidator = (rules) =>
         return validate;
 }
 
-const validator = createValidator(rules);
+const validator = createValidator(passwordRules);
 
 function main()
 {
-    const result = validator("Oleh");   
-    console.log(result); 
+    console.log(validator("Oleh"));
+    console.log(validator("O"));
+    console.log(validator("oleh"));
+    console.log(validator("OlehOlehOlehOleh"));
 }
 
 main();
