@@ -10,7 +10,7 @@ const rules = [
     isCapitalized,
 ];
 
-const validator = createValidator(rules);
+const createValidator = (rules) => validate;
 
 const validate = (userValue) =>
 {
