@@ -1,4 +1,4 @@
-const isLongEnough = (userValue) => userValue.length >=3; 
+const isLongEnough = (userValue) => userValue.length >=2; 
 
 const isShortEnough = (userValue) => userValue.length <= 10; 
 
@@ -29,7 +29,8 @@ const validator = createValidator(rules);
 
 function main()
 {
-    validator("Oleh");    
+    const result = validator("Oleh");   
+    console.log(result); 
 }
 
 main();
