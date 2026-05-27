@@ -5,19 +5,23 @@ const createCounter = () =>
     const increment = () => 
     {
         count++;
-        return count;
     }
 
     const decrement = () =>
     {
         count--;
-        return count;
     }
 
     const getCount = () =>
     {
         return count;
     }
+
+    return {
+        increment,
+        decrement,
+        getCount,
+    };
 }
 
 function main()
@@ -26,9 +30,9 @@ function main()
     
     counter.increment();
     counter.increment();
-    counter.getCount();
+    console.log(counter.getCount());
     counter.decrement();
-    counter.getCount();
+    console.log(counter.getCount());
 }
 
 main();
