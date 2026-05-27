@@ -1,4 +1,4 @@
-const createMultiplier = (factor) => 
+const createMultiplier = (factor) =>
     {
         const multiplier = (value) => value * factor;
 

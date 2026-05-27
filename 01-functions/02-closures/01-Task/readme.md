@@ -1,0 +1,1 @@
+The problem uses the closure method to multiply numbers
